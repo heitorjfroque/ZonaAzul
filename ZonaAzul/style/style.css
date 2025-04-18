@@ -1,0 +1,254 @@
+/* Importa a fonte 'Poppins' do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+/* Define estilos globais para todos os elementos */
+*{
+    padding: 0; /* Remove o preenchimento padrão */
+    margin: 0; /* Remove a margem padrão */
+    box-sizing: border-box; /* Inclui bordas e preenchimento no tamanho total */
+    font-family: 'Poppins', sans-serif; /* Define a fonte padrão */
+}
+
+/* Estilo para o corpo da página */
+body{
+    background: #e4e9f7; /* Define a cor de fundo */
+}
+
+/* Estilo para o contêiner principal */
+.container{
+    display: flex; /* Usa flexbox para alinhamento */
+    align-items: center; /* Alinha os itens verticalmente */
+    justify-content: center; /* Centraliza os itens horizontalmente */
+    min-height: 90vh; /* Define a altura mínima */
+}
+
+/* Estilo para caixas */
+.box{
+    background: #fdfdfd; /* Cor de fundo */
+    display: flex; /* Usa flexbox */
+    flex-direction: column; /* Alinha os itens em coluna */
+    padding: 25px 25px; /* Espaçamento interno */
+    border-radius: 20px; /* Bordas arredondadas */
+    box-shadow: 0 0 128px 0 rgba(0,0,0,0.1), /* Sombra externa */
+                0 32px 64px -48px rgba(0,0,0,0.5);
+}
+
+/* Estilo específico para caixas de formulário */
+.form-box{
+    width: 450px; /* Largura fixa */
+    margin: 0px 10px; /* Margem horizontal */
+}
+
+/* Estilo para o cabeçalho dentro da caixa de formulário */
+.form-box header{
+    font-size: 25px; /* Tamanho da fonte */
+    font-weight: 600; /* Peso da fonte */
+    padding-bottom: 10px; /* Espaçamento inferior */
+    border-bottom: 1px solid #e6e6e6; /* Linha inferior */
+    margin-bottom: 10px; /* Margem inferior */
+}
+
+/* Estilo para os campos do formulário */
+.form-box form .field{
+    display: flex; /* Usa flexbox */
+    margin-bottom: 10px; /* Margem inferior */
+    flex-direction: column; /* Alinha os itens em coluna */
+}
+
+/* Estilo para os campos de entrada */
+.form-box form .input input{
+    height: 40px; /* Altura do campo */
+    width: 100%; /* Largura total */
+    font-size: 16px; /* Tamanho da fonte */
+    padding: 0 10px; /* Espaçamento interno */
+    border-radius: 5px; /* Bordas arredondadas */
+    border: 1px solid #ccc; /* Borda cinza */
+    outline: none; /* Remove o contorno padrão */
+}
+
+/* Estilo para botões */
+.btn{
+    height: 35px; /* Altura do botão */
+    background: #5271ff; /* Cor de fundo */
+    border: 0; /* Remove a borda */
+    border-radius: 5px; /* Bordas arredondadas */
+    color: #fff; /* Cor do texto */
+    font-size: 15px; /* Tamanho da fonte */
+    cursor: pointer; /* Cursor de ponteiro */
+    transition: all .3s; /* Transição suave */
+    margin-top: 10px; /* Margem superior */
+    padding: 0px 10px; /* Espaçamento interno */
+}
+
+/* Efeito ao passar o mouse sobre o botão */
+.btn:hover{
+    opacity: 0.82; /* Reduz a opacidade */
+}
+
+/* Estilo para botões de envio */
+.submit{
+    width: 100%; /* Largura total */
+}
+
+/* Estilo para links */
+.links{
+    margin-bottom: 15px; /* Margem inferior */
+}
+
+/* Estilo para botão de adicionar saldo */
+.btn-add-saldo {
+    background: #5271ff; /* Cor azul */
+    color: #fff; /* Cor do texto */
+    border: none; /* Sem borda */
+    border-radius: 8px; /* Bordas levemente arredondadas */
+    width: 30px; /* Largura do botão */
+    height: 30px; /* Altura do botão */
+    font-size: 18px; /* Tamanho da fonte */
+    font-weight: bold; /* Texto em negrito */
+    cursor: pointer; /* Cursor de ponteiro */
+    display: flex; /* Flexbox para centralizar o texto */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    transition: all 0.3s ease; /* Transição suave */
+}
+
+.btn-add-saldo:hover {
+    opacity: 0.9; /* Reduz a opacidade ao passar o mouse */
+}
+
+/********* Estilos para a página inicial (Home) *****************/
+
+/* Estilo para a barra de navegação */
+.nav{
+    background: #fff; /* Cor de fundo */
+    display: flex; /* Usa flexbox */
+    flex-direction: row; /* Alinha os itens em linha */
+    justify-content: space-around; /* Espaçamento entre os itens */
+    line-height: 60px; /* Altura da linha */
+    z-index: 100; /* Prioridade na sobreposição */
+}
+
+/* Estilo para o logotipo */
+.logo{
+    font-size: 25px; /* Tamanho da fonte */
+    font-weight: 900; /* Peso da fonte */
+}
+
+/* Estilo para links do logotipo */
+.logo a{
+    text-decoration: none; /* Remove o sublinhado */
+    color: #000; /* Cor do texto */
+}
+
+/* Estilo para imagens do logotipo */
+.logo img {
+    width: 50px; /* Ajuste a largura conforme necessário */
+    height: 50px; /* Ajuste a altura conforme necessário */
+    object-fit: contain; /* Garante que a proporção da imagem seja mantida */
+}
+
+/* Estilo para links à direita */
+.right-links a{
+    padding: 0 10px; /* Espaçamento interno horizontal */
+}
+
+/* Estilo para o elemento principal */
+main{
+    display: flex; /* Usa flexbox */
+    align-items: center; /* Alinha os itens verticalmente */
+    justify-content: center; /* Centraliza os itens horizontalmente */
+    margin-top: 60px; /* Margem superior */
+}
+
+/* Estilo para a caixa principal */
+.main-box{
+    display: flex; /* Usa flexbox */
+    flex-direction: column; /* Alinha os itens em coluna */
+    width: 70%; /* Largura relativa */
+}
+
+/* Estilo para a seção superior da caixa principal */
+.main-box .top{
+    display: flex; /* Usa flexbox */
+    flex-direction: row; /* Alinha os itens em linha */
+    justify-content: space-between; /* Espaçamento entre os itens */
+}
+
+/* Estilo para a seção inferior */
+.bottom{
+    width: 100%; /* Largura total */
+    margin-top: 20px; /* Margem superior */
+}
+
+/* Estilos responsivos para telas menores */
+@media only screen and (max-width:840px){
+    .main-box .top{
+        display: flex; /* Usa flexbox */
+        flex-direction: column; /* Alinha os itens em coluna */
+        justify-content: space-between; /* Espaçamento entre os itens */
+    }
+    .top .box{
+        margin: 10px 10px; /* Margem interna */
+    }
+    .bottom{
+        margin-top: 0; /* Remove a margem superior */
+    }
+}
+
+/* Estilo para mensagens de erro */
+.message {
+    text-align: center; /* Centraliza o texto */
+    background: #ffeaea; /* Cor de fundo */
+    padding: 16px 20px; /* Espaçamento interno */
+    border: 2px solid #e63946; /* Borda vermelha */
+    border-radius: 8px; /* Bordas arredondadas */
+    margin-bottom: 15px; /* Margem inferior */
+    color: #b00020; /* Cor do texto */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Fonte */
+    font-size: 16px; /* Tamanho da fonte */
+    font-weight: 500; /* Peso da fonte */
+    box-shadow: 0 4px 8px rgba(230, 57, 70, 0.1); /* Sombra */
+    animation: fadeInSlide 0.6s ease-out; /* Animação */
+    position: relative; /* Posição relativa */
+}
+
+/* Ícone opcional para mensagens de erro */
+.message::before {
+    content: "⚠️"; /* Adiciona um ícone antes do texto */
+    margin-right: 10px; /* Espaçamento à direita */
+}
+
+/* Animação para mensagens */
+@keyframes fadeInSlide {
+    from {
+        opacity: 0; /* Inicia invisível */
+        transform: translateY(-10px); /* Move para cima */
+    }
+    to {
+        opacity: 1; /* Torna visível */
+        transform: translateY(0); /* Move para a posição original */
+    }
+}
+
+/* Estilo para mensagens de sucesso */
+.message-success {
+    text-align: center; /* Centraliza o texto */
+    background: #e6f9ed; /* Cor de fundo */
+    padding: 16px 20px; /* Espaçamento interno */
+    border: 2px solid #2ecc71; /* Borda verde */
+    border-radius: 8px; /* Bordas arredondadas */
+    margin-bottom: 15px; /* Margem inferior */
+    color: #207744; /* Cor do texto */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Fonte */
+    font-size: 16px; /* Tamanho da fonte */
+    font-weight: 500; /* Peso da fonte */
+    box-shadow: 0 4px 8px rgba(46, 204, 113, 0.1); /* Sombra */
+    animation: fadeInSlide 0.6s ease-out; /* Animação */
+    position: relative; /* Posição relativa */
+}
+
+/* Ícone opcional para mensagens de sucesso */
+.message-success::before {
+    content: "✅"; /* Adiciona um ícone antes do texto */
+    margin-right: 10px; /* Espaçamento à direita */
+}

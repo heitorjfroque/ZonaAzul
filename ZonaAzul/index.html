@@ -1,0 +1,70 @@
+<!-- Declaração do tipo de documento HTML -->
+<!DOCTYPE html>
+<!-- Início do documento HTML -->
+<html lang="pt-BR">
+<head>
+  <!-- Configuração do conjunto de caracteres para UTF-8 -->
+  <meta charset="UTF-8" />
+  <!-- Configuração para compatibilidade com o Internet Explorer -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Configuração para tornar o site responsivo -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Link para o arquivo de estilo CSS -->
+  <link rel="stylesheet" href="style/style.css" />
+  <!-- Título da página -->
+  <title>Login</title>
+</head>
+<body>
+  <!-- Contêiner principal -->
+  <div class="container">
+    <!-- Caixa que contém o formulário -->
+    <div class="box form-box">
+      <!-- Cabeçalho do formulário -->
+      <header>Login</header>
+
+      <!-- Div para exibir mensagens de erro -->
+      <div id="error-message">
+        <!-- Mensagem será inserida aqui via JavaScript se enviada na URL -->
+      </div>
+
+      <!-- Formulário de login -->
+      <form action="php/login_process.php" method="post"> 
+        <!-- Campo de entrada para o email -->
+        <div class="field input">
+          <label for="email">Email</label>
+          <input type="text" name="email" id="email" autocomplete="off" required />
+        </div>
+
+        <!-- Campo de entrada para a senha -->
+        <div class="field input">
+          <label for="password">Senha</label>
+          <input type="password" name="password" id="password" autocomplete="off" required />
+        </div>
+
+        <!-- Botão de envio do formulário -->
+        <div class="field">
+          <input type="submit" class="btn" name="submit" value="Login" />
+        </div>
+
+        <!-- Link para a página de cadastro -->
+        <div class="links">
+          Não tem uma conta? <a href="php/register.php">Cadastre-se</a>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Script JavaScript para exibir mensagens de erro -->
+  <script>
+    // Obtém os parâmetros da URL
+    const params = new URLSearchParams(window.location.search);
+    // Verifica se existe um parâmetro de erro
+    if (params.has("error")) {
+      // Seleciona o elemento onde a mensagem será exibida
+      const errorBox = document.getElementById("error-message");
+      // Insere a mensagem de erro no elemento
+      errorBox.innerHTML = `<div class="message"><p>${params.get("error")}</p></div><br>`;
+    }
+  </script>
+</body>
+</html>
